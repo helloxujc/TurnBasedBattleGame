@@ -1,0 +1,59 @@
+/Users/txuxyan/PycharmProjects/pythonProject1CS5001/.venv/bin/python /Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py --path /Users/txuxyan/Desktop/5001/tryout/Team4-Jiachen-Min-Tianlu-Zeynab/Final_Project_Battle/test_screens.py 
+Testing started at 12:42 PM ...
+Launching pytest with arguments /Users/txuxyan/Desktop/5001/tryout/Team4-Jiachen-Min-Tianlu-Zeynab/Final_Project_Battle/test_screens.py --no-header --no-summary -q in /Users/txuxyan/Desktop/5001/tryout/Team4-Jiachen-Min-Tianlu-Zeynab/Final_Project_Battle
+
+============================= test session starts ==============================
+collecting ... collected 10 items
+
+test_screens.py::TestScreens::test_battle_screen_attack 
+test_screens.py::TestScreens::test_battle_screen_defend 
+test_screens.py::TestScreens::test_battle_screen_use_skill 
+test_screens.py::TestScreens::test_choose_char_screen_magician 
+test_screens.py::TestScreens::test_choose_char_screen_tanker 
+test_screens.py::TestScreens::test_choose_char_screen_warrior 
+test_screens.py::TestScreens::test_main_screen_exit_game 
+test_screens.py::TestScreens::test_main_screen_start_game 
+test_screens.py::TestScreens::test_result_screen_exit 
+test_screens.py::TestScreens::test_result_screen_restart 
+
+============================== 10 passed in 2.50s ==============================
+PASSED           [ 10%]The Player chooses Warrior as their character.
+The enemy chooses Magician as their character.
+Mouse clicked at: (350, 275)
+Checking button rect: <rect(300, 250, 200, 50)>
+Attack action triggered!
+Button clicked: Attack
+2024-12-07 12:42:15.016 Python[59055:11069812] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
+PASSED           [ 20%]The Player chooses Warrior as their character.
+The enemy chooses Magician as their character.
+Mouse clicked at: (350, 375)
+Checking button rect: <rect(300, 250, 200, 50)>
+Checking button rect: <rect(300, 350, 200, 50)>
+Defend action triggered!
+Button clicked: Defend
+PASSED        [ 30%]The Player chooses Warrior as their character.
+The enemy chooses Tanker as their character.
+Mouse clicked at: (350, 475)
+Checking button rect: <rect(300, 250, 200, 50)>
+Checking button rect: <rect(300, 350, 200, 50)>
+Checking button rect: <rect(300, 450, 300, 50)>
+Use Special Skill action triggered!
+Button clicked: Use Skill
+PASSED    [ 40%]The Player chooses Warrior as their character.
+The enemy chooses Tanker as their character.
+PASSED      [ 50%]The Player chooses Warrior as their character.
+The enemy chooses Warrior as their character.
+PASSED     [ 60%]The Player chooses Warrior as their character.
+The enemy chooses Warrior as their character.
+PASSED          [ 70%]The Player chooses Warrior as their character.
+The enemy chooses Warrior as their character.
+Exit clicked!
+PASSED         [ 80%]The Player chooses Warrior as their character.
+The enemy chooses Magician as their character.
+Start Game clicked!
+PASSED             [ 90%]The Player chooses Warrior as their character.
+The enemy chooses Magician as their character.
+PASSED          [100%]The Player chooses Warrior as their character.
+The enemy chooses Tanker as their character.
+
+Process finished with exit code 0
