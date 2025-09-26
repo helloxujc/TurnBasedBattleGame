@@ -41,14 +41,6 @@ jobs:
         cd backend
         python -m pytest --cov=app --cov-report=xml --cov-report=term tests/
 
-    - name: Upload backend coverage to Codecov
-      if: success()
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./backend/coverage.xml
-        flags: backend
-        name: backend-coverage
-
   test-frontend:
     runs-on: ubuntu-latest
 
@@ -81,15 +73,7 @@ jobs:
       run: |
         cd frontend
         npm run build
-
-    - name: Upload frontend coverage to Codecov
-      if: success()
-      uses: codecov/codecov-action@v3
-      with:
-        directory: ./frontend/coverage
-        flags: frontend
-        name: frontend-coverage
-
+      
   security-scan:
     runs-on: ubuntu-latest
     
@@ -138,18 +122,3 @@ jobs:
     - name: Health check
       run: |
         curl -f ${{ secrets.BACKEND_URL }}/health || exit 1
-
-  notify:
-    needs: [deploy-backend]
-    runs-on: ubuntu-latest
-    if: always() && github.ref == 'refs/heads/main'
-
-    steps:
-    - name: Notify deployment status
-      uses: 8398a7/action-slack@v3
-      with:
-        status: ${{ job.status }}
-        channel: '#deployments'
-        webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
