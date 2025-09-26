@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: turnbased-battle-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && python run.py
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+    autoDeploy: false
