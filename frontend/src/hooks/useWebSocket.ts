@@ -113,7 +113,7 @@ export const useWebSocket = (url: string): UseWebSocketReturn => {
     return () => {
       disconnect();
     };
-  }, []);
+  }, [connect, disconnect]);
 
   return {
     socket,
